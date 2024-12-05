@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import recipeRoutes from "../routes/recipeRoutes";
-import userRoutes from "../routes/userRoutes";
+import recipeRoutes from "./routes/recipeRoutes";
+import userRoutes from "./routes/userRoutes";
 
 const app = express();
 
