@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface UserCardProps{
+interface UserCardProps {
     username: string;
     email: string;
 }

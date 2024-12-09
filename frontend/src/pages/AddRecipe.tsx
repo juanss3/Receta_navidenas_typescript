@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import apiClient from '../utils/api';
 
 const AddRecipe: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ const AddRecipe: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await axios.post('/api/recipes', formData);
+            await apiClient.post('/api/recipes', formData);
             alert('Recipe added successfully');
         } catch (error) {
             alert('Error adding recipe');

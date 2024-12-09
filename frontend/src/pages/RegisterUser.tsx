@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 const RegisterUser: React.FC = () => {
     const [formData, setFormData] = useState({
         username: '',
@@ -8,15 +9,17 @@ const RegisterUser: React.FC = () => {
         password: '',
     });
 
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await axios.post('/api/users/register', formData);
+            await axios.post('api/users/register', formData);
             alert('User registered successfully');
         } catch (error) {
             alert('Error registering user');
         }
     };
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -28,4 +31,10 @@ const RegisterUser: React.FC = () => {
     );
 };
 
+
 export default RegisterUser;
+
+
+
+
+
